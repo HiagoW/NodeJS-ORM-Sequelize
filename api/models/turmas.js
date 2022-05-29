@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 const {
   Model
-} = require('sequelize');
+} = require('sequelize')
 module.exports = (sequelize, DataTypes) => {
   class Turmas extends Model {
     /**
@@ -15,17 +15,18 @@ module.exports = (sequelize, DataTypes) => {
       })
       Turmas.belongsTo(models.Pessoas, {
         foreignKey: 'docente_id'
-      });
+      })
       Turmas.belongsTo(models.Niveis, {
         foreignKey: 'nivel_id'
-      });
+      })
     }
   }
   Turmas.init({
     data_inicio: DataTypes.DATEONLY
   }, {
+    paranoid: true,
     sequelize,
     modelName: 'Turmas',
-  });
-  return Turmas;
-};
+  })
+  return Turmas
+}
