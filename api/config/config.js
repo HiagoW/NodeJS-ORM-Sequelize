@@ -3,7 +3,8 @@ module.exports = {
   'development': {
     'username': 'root',
     // eslint-disable-next-line no-undef
-    'password': process.env.MYSQL_PASSWORD,
+    // 'password': process.env.MYSQL_PASSWORD,
+    'password': '',
     'database': 'escola_ingles',
     'host': '127.0.0.1',
     'dialect': 'mysql'
